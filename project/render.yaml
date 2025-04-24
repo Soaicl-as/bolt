@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: instagram-dm-bot
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    region: ohio
+    plan: free
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+    autoDeploy: false
